@@ -2687,7 +2687,6 @@ a {
 }
 
 .start-menu.show {
-  background-image: url(/sad.png);
   background-repeat: no-repeat;
   background-size: 164px 239px;
   display: none;
@@ -2796,7 +2795,7 @@ a {
 
 .screensaver {
   z-index: 999;
-  background-image: url(/bg-1.gif);
+  background-image: url(/public/bg-1.gif);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
