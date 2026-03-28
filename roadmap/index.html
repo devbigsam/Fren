@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>$FREN Roadmap.exe</title>
+<style>
+body {
+    margin: 0;
+    background: #000;
+    font-family: "Courier New", monospace;
+    color: #00ff9f;
+}
+
+/* CRT effect */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0,0,0,0.2) 0px,
+        rgba(0,0,0,0.2) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+}
+
+/* window */
+.window {
+    padding: 20px;
+}
+
+/* title */
+.title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* steps */
+.step {
+    margin-bottom: 25px;
+    padding-left: 10px;
+    border-left: 2px solid #00ff9f;
+}
+
+.step span {
+    color: #fff;
+}
+
+/* blinking cursor */
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {opacity:1;}
+    25%, 75% {opacity:0;}
+}
+
+/* image */
+.hero {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hero img {
+    width: 200px;
+    filter: drop-shadow(0 0 10px #00ff9f);
+}
+</style>
+</head>
+
+<body>
+<div class="window">
+
+<div class="title">C:\FREN\roadmap.exe</div>
+
+<div class="step">[✓] <span>Launch</span> → Fren appears</div>
+<div class="step">[✓] <span>Buy</span> → Fren acquired</div>
+<div class="step">[✓] <span>Hold</span> → Fren held</div>
+<div class="step">[✓] <span>Convince others</span> → More frens</div>
+<div class="step">[✓] <span>Ignore FUD</span> → Stronger frens</div>
+<div class="step">[✓] <span>Repeat</span> → Infinite loop</div>
+
+<br>
+
+<div class="step">
+[∞] <span>Outcome:</span> Nobody knows.<br>
+But it always ends the same…
+</div>
+
+<div class="step">
+<span>→ We go higher.</span>
+</div>
+
+<div class="hero">
+<img src="/public/hero.png">
+</div>
+
+<p>> system status: running<span class="blink">_</span></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "fren-static-site",
+  "version": "1.0.0",
+  "description": "FREN static website for Vercel deployment",
+  "type": "module",
+  "scripts": {
+    "dev": "serve .",
+    "preview": "serve . -p 3001"
+  },
+  "author": "Fren Team"
+}

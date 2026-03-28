@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$Fren Browser</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+        font-family: 'MS Sans Serif', sans-serif;
+        background-color: #0080FF;
+
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+    .titlebar {
+        background: linear-gradient(to bottom, #0080FF, #0066CC);
+        height: 28px;
+        display: flex;
+        align-items: center;
+        padding: 0 4px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .toolbar {
+        background: #C0C0C0;
+        height: 26px;
+        border-bottom: 1px inset #dfdfdf;
+        display: flex;
+        align-items: center;
+        padding: 0 2px;
+        gap: 4px;
+    }
+
+    .statusbar {
+        height: 18px;
+        background: #C0C0C0;
+        border-top: 1px inset #dfdfdf;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        padding: 0 4px;
+    }
+
+    /* Prevent shrinking */
+    .titlebar,
+    .toolbar,
+    .statusbar {
+        flex-shrink: 0;
+    }
+
+    .titlebar-controls {
+        display: flex;
+        gap: 2px;
+        margin-left: auto;
+    }
+
+    .control-btn {
+        width: 20px;
+        height: 20px;
+        border: 1px outset #ccc;
+        background: #c0c0c0;
+        font-size: 12px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-text {
+        margin-left: 4px;
+        font-size: 12px;
+    }
+
+    .ie-logo {
+        width: 16px;
+        height: 16px;
+        background: #FFD700;
+        border-radius: 2px;
+        margin-right: 4px;
+    }
+
+    .toolbar-btn {
+        background: #C0C0C0;
+        border: 1px outset #dfdfdf;
+        padding: 2px 6px;
+        font-size: 11px;
+        cursor: pointer;
+    }
+
+    .toolbar-btn:active {
+        border: 1px inset #dfdfdf;
+    }
+
+    .address-bar-container {
+        flex: 1;
+        background: white;
+        border: 1px inset #dfdfdf;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        margin: 0 4px;
+    }
+
+    .address-bar {
+        flex: 1;
+        border: none;
+        padding: 2px 4px;
+        font-size: 11px;
+        background: white;
+    }
+
+    .go-btn {
+        background: #C0C0C0;
+        border: 1px outset #dfdfdf;
+        padding: 2px 8px;
+        cursor: pointer;
+        font-size: 11px;
+    }
+
+    /* SCROLL FIX HERE */
+    .content-frame {
+        flex: 1;
+        background: white;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 10px;
+    }
+
+    /* Optional retro scrollbar */
+    .content-frame::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    .content-frame::-webkit-scrollbar-track {
+        background: #c0c0c0;
+    }
+
+    .content-frame::-webkit-scrollbar-thumb {
+        background: #808080;
+        border: 2px solid #c0c0c0;
+    }
+
+    .project-info h1 {
+        color: #000080;
+        margin-bottom: 10px;
+    }
+
+    .project-info h2 {
+        color: #0000A0;
+        margin: 15px 0 10px;
+    }
+
+    .project-info ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .meme-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .meme-item img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+    }
+
+    a {
+        color: #0000EE;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+    <div class="titlebar-controls">
+        <div class="control-btn">_</div>
+        <div class="control-btn">☐</div>
+        <div class="control-btn">×</div>
+    </div>
+</div>
+
+<div class="toolbar">
+    <div class="toolbar-btn">Back</div>
+    <div class="toolbar-btn">Forward</div>
+    <div class="toolbar-btn">Stop</div>
+    <div class="toolbar-btn">Refresh</div>
+    <div class="toolbar-btn">Home</div>
+    <div class="toolbar-btn">Search</div>
+    <div class="toolbar-btn">Favorites</div>
+    <div class="toolbar-btn">History</div>
+
+    <div class="address-bar-container">
+        <input type="text" class="address-bar" value="file://c:/Users/FREN/BROWSER.exe" readonly>
+        <div class="go-btn">Go</div>
+    </div>
+</div>
+
+<div class="content-frame">
+    <div class="project-info">
+        <h1>Welcome to $Fren Browser</h1>
+        <p>This is the official browser for the Fren project. Explore memes, roadmap, and more!</p>
+
+    <img src="https://i.ibb.co/KxX2sQjS/FREN-OG-meme.jpg" style="width:100%; margin:10px 0;" />
+<br></br>
+        <h2>Project Overview</h2>
+      
+         <div class="game-screen-block center"><img src="/public/hero.png" width="300" height="" alt="" class="game-screen big" /></div>
+                        <div class="game-info">
+                            <p class="game-title"><strong class="bold-text-2">THE LORE</strong></p>
+                            <p class="game-description">
+                      Welcome to Fren!
+
+Grab a cup of coffee and soak this all in! So $fren actually pre dates $wif by several years. Fren was first posted on reddit in 2016 and wif was only birthed in 2019 so when you see the resemblance just know Fren came before Wif. 
+
+Why fren??
+
+There is a big problem with solana memes and the trenches right now, where memes are heavily reliant upon news or tweets to send and this is actually causing harm to the trenches as it almost weakens the community and makes bag working mentality almost non-existent!
+
+Projects that fall into this category - ai slop, tiktok meta, viral zoo animals! These memes as we all know are short lived and never last long given they are news or viral based.
+
+This overall isn't good for the space and memes and the only answer is a hard reset back to the OG memes such Wif, Billy, Michi, Shark Cat where meme cults formed, bag working thrived.
+
+$Fren could well be the answer to this as these memes tend to have far more longevity and actually bring back that tradition of good memes and bag working mentality. 
+
+Fren is also an iconic crypto slang term we all use on a daily basis, even the likes of Ryoshi used this in his medium article and the introduction to Shiba Inu! 
+
+To add Fren is a play on the word Friend just like Wif was a play on the word With, it's extremely normie friendly, it has infinite memeability and a golden 4 letter ticker.
+
+This isn't just a random meme we have on our hands..Fren is the answer to reset the game back to how it was..
+
+Join us on this journey Fren...
+                            </p>
+
+                        </div>
+                    
+
+        <h2>Featured Memes</h2>
+        <div class="meme-grid">
+            <div class="meme-item"><img src="/public/FREN.png"></div>
+            <div class="meme-item"><img src="/public/FREN - Batman Slap.png"></div>
+            <div class="meme-item"><img src="/public/FREN - Drake.png"></div>
+            <div class="meme-item"><img src="/public/FREN - Gladiator.png"></div>
+        </div>
+        <div class="more-memes">
+        👉 In your desktop, open the <b>MEMES</b> folder to explore more images and videos.
+    </div>
+
+        <h2>Links</h2>
+        <ul>
+            <li><a href="https://x.com/i/communities/2028865796538335393">Twitter</a></li>
+            <li><a href="https://www.tiktok.com/@sayhellofren">Tiktok</a></li>
+            <li><a href="https://www.dextools.io/app/solana/pair-explorer/JGaCrqMm2JqV9g4wVDiPNr4hDNJny5B6FZb75msjtSC">Dexscreener</a></li>
+            <li><a href="https://t.me/SayHelloFren">Telegram</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="statusbar">
+    Done · File | Edit | View | Favorites | Tools | Help
+</div>
+
+<script>
+    document.querySelector('.go-btn').onclick = () => {
+        alert('Navigating to Fren project...');
+    };
+
+    document.querySelectorAll('.control-btn')[2].onclick = () => {
+        window.close();
+    };
+
+    document.querySelectorAll('.toolbar-btn')[3].onclick = () => {
+        location.reload();
+    };
+</script>
+</body>
+</html>
